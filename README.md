@@ -1,4 +1,7 @@
-# test coverage for  [tap-spec (v4.1.1)](https://github.com/scottcorgan/tap-spec#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-tap-spec.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-tap-spec) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-tap-spec.svg)](https://travis-ci.org/npmtest/node-npmtest-tap-spec)
+# npmtest-tap-spec
+
+#### basic test coverage for  [tap-spec (v4.1.1)](https://github.com/scottcorgan/tap-spec#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-tap-spec.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-tap-spec) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-tap-spec.svg)](https://travis-ci.org/npmtest/node-npmtest-tap-spec)
+
 #### Formatted TAP output like Mocha's spec reporter
 
 [![NPM](https://nodei.co/npm/tap-spec.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/tap-spec)
