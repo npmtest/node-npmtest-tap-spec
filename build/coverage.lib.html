@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for node-npmtest-tap-spec/node_modules/tap-spec/lib/utils/l-trim-list.js</title>
+    <title>Code coverage report for node-npmtest-tap-spec/node_modules/tap-spec/bin/cmd.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -190,27 +190,27 @@
     </style>
 </head>
 <body>
-<div class="header low">
+<div class="header medium">
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-tap-spec">npmtest-tap-spec (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-tap-spec/node_modules/tap-spec/lib/utils/l-trim-list.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-tap-spec/node_modules/tap-spec/bin/cmd.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">22.22% <small>(2 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">50% <small>(4 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">0% <small>(0 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">22.22% <small>(2 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">50% <small>(4 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-tap-spec/node_modules/tap-spec/lib/utils/</a> &#187; l-trim-list.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-tap-spec/node_modules/tap-spec/bin/</a> &#187; cmd.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -234,57 +234,51 @@
 18
 19
 20
-21
-22
-23</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+21</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var _ = require('lodash');
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//#!/usr/bin/env node
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function (lines) {</span>
+var tapSpec = require('../');
+var tapSpec = tapSpec();
+&nbsp;
+process.stdin
+  .pipe(tapSpec)
+  .pipe(process.stdout);
+&nbsp;
+process.on('exit', <span class="fstat-no" title="function not covered" >function (status) {</span>
   
-<span class="cstat-no" title="statement not covered" >  var leftPadding;</span>
+<span class="cstat-no" title="statement not covered" >  if (status === 1) {</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
+  }
   
-  // Get minimum padding count
-<span class="cstat-no" title="statement not covered" >  _.each(lines, <span class="fstat-no" title="function not covered" >function (line) {</span></span>
-    
-<span class="cstat-no" title="statement not covered" >    var spaceLen = line.match(/^\s+/)[0].length;</span>
-    
-<span class="cstat-no" title="statement not covered" >    if (leftPadding === undefined || spaceLen &lt; leftPadding) {</span>
-<span class="cstat-no" title="statement not covered" >      leftPadding = spaceLen;</span>
-    }
-  });
-  
-  // Strip padding at beginning of line
-<span class="cstat-no" title="statement not covered" >  return _.map(lines, <span class="fstat-no" title="function not covered" >function (line) {</span></span>
-    
-<span class="cstat-no" title="statement not covered" >    return line.slice(leftPadding);</span>
-  });
-}
+<span class="cstat-no" title="statement not covered" >  if (tapSpec.failed) {</span>
+<span class="cstat-no" title="statement not covered" >    process.exit(1);</span>
+  }
+});
+&nbsp;
 &nbsp;</pre></td></tr>
 </table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 13:01:52 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Thu Apr 20 2017 01:30:23 GMT+0000 (UTC)</div>
 </div>
 </body>
 </html>
